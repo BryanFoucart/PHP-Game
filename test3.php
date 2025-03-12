@@ -22,11 +22,15 @@ if ($NbAccident == 0) {
 
 if ($Age >= 25) {
     $Score = $Score + 1;
+} elseif ($Age < 18 && $AnnéePermis < 0) {
+    $Score = $Score - 10;
 } else {
     $Score = $Score;
 }
 if ($AnnéePermis >= 2) {
     $Score = $Score + 1;
+} elseif ($AnnéePermis <= 0) {
+    $Score = $Score - 10;
 } else {
     $Score = $Score;
 }
