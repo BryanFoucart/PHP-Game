@@ -6,7 +6,10 @@ $AnnéePermis = 0;
 $Score = 0;
 
 $NbAccident = readline("Nombre d'accident : ");
-$Age = readline("Age : ");
+while ($Age < 18 || $Age > 100) {
+    echo "Veuillez saisir un âge compris entre 18 & 100 ans\n";
+    $Age = readline("Age : ");
+}
 $AnnéePermis = readline("Année du permis : ");
 $Ancienneté = readline("Ancienneté : ");
 
