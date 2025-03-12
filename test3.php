@@ -14,8 +14,10 @@ if ($NbAccident == 0) {
     $Score = $Score;
 } elseif ($NbAccident == 1) {
     $Score = $Score - 1;
-} elseif ($NbAccident >= 2) {
+} elseif ($NbAccident == 2) {
     $Score = $Score - 2;
+} elseif ($NbAccident >= 3) {
+    $Score = $Score - 3;
 }
 
 if ($Age >= 25) {
