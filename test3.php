@@ -11,22 +11,22 @@ $AnnéePermis = readline("Année du permis : ");
 $Ancienneté = readline("Ancienneté : ");
 
 if ($NbAccident == 0) {
-    $Score = $Score + 1;
+    $Score = $Score;
 } elseif ($NbAccident == 1) {
     $Score = $Score - 1;
 } elseif ($NbAccident >= 2) {
     $Score = $Score - 2;
 }
 
-if ($Age <= 25) {
-    $Score = $Score;
-} else {
+if ($Age >= 25) {
     $Score = $Score + 1;
+} else {
+    $Score = $Score;
 }
-if ($AnnéePermis <= 2) {
-    $Score = $Score;
-} else {
+if ($AnnéePermis >= 2) {
     $Score = $Score + 1;
+} else {
+    $Score = $Score;
 }
 
 if ($Ancienneté >= 5 && $Score >= 0) {
