@@ -44,14 +44,35 @@ if ($Ancienneté >= 5 && $Score >= 0) {
     $Score = $Score;
 }
 
-if ($Score < 0)
-    echo "Tarif : Vous n'êtes pas éligible\n";
-elseif ($Score == 0)
-    echo "Tarif : Rouge\n";
-elseif ($Score == 1)
-    echo "Tarif : Orange\n";
-elseif ($Score == 2)
-    echo "Tarif : Vert\n";
-elseif ($Score == 3)
-    echo "Tarif : Bleu\n";
-echo "Score : $Score\n";
+switch ($Score) {
+    case '0':
+        echo "Tarif : Rouge\n";
+        break;
+
+    case '1':
+        echo "Tarif : Orange\n";
+        break;
+
+    case '2':
+        echo "Tarif : Vert\n";
+        break;
+
+    case '3':
+        echo "Tarif : Bleu\n";
+        break;
+    default:
+        echo "Tarif : Vous n'êtes pas éligible\n";
+        break;
+}
+
+// if ($Score < 0)
+//     echo "Tarif : Vous n'êtes pas éligible\n";
+// elseif ($Score == 0)
+//     echo "Tarif : Rouge\n";
+// elseif ($Score == 1)
+//     echo "Tarif : Orange\n";
+// elseif ($Score == 2)
+//     echo "Tarif : Vert\n";
+// elseif ($Score == 3)
+//     echo "Tarif : Bleu\n";
+// echo "Score : $Score\n";
